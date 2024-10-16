@@ -14,4 +14,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/coin-or/coinbrew /var/coin-or
 WORKDIR /var/coin-or
 RUN ./coinbrew fetch COIN-OR-OptimizationSuite@stable/1.9 --skip="ThirdParty/Blas ThirdParty/Lapack ThirdParty/Metis" --no-prompt
-RUN ./coinbrew build  COIN-OR-OptimizationSuite --skip="ThirdParty/Blas ThirdParty/Lapack ThirdParty/Metis ThirdParty/Glpk" --no-prompt --prefix=/usr ADD_FCFLAGS=-fallow-argument-mismatch ADD_FFLAGS=-fallow-argument-mismatch
+RUN ./coinbrew build  COIN-OR-OptimizationSuite --skip="ThirdParty/Blas ThirdParty/Lapack ThirdParty/Metis ThirdParty/Glpk" --no-prompt --prefix=/usr ADD_CXXFLAGS="-std=c++14"  ADD_FCFLAGS=-fallow-argument-mismatch ADD_FFLAGS=-fallow-argument-mismatch
