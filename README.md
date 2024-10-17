@@ -6,12 +6,19 @@ NOTE that these versions are post the "cxx14" era and so by default some old fea
 Use the CXXFLAGS to enable cxx14 support to compile old programs (like I did in the Dockerfile)
 Similarly for Fortran flags (See the Dockerfile)
 
+I have also modified the repository access to use https instead of http (in the Dockerfile).
+This removes http related errors from certain proxies that result in Checksum/Hash errors.
+
+In the resultant docker image, the OR executables are installed in **/usr/bin** 
+and the OR libraries are installed in **/usr/lib**
+
 This image can serve as a great base image for python programmers interested in developing optimization programs.
 For e.g. Python programs that use Pyomo library (or) any other optimization library that can benefit from the solvers built into this image.
 
 Cheers!
 
-# Building from sources (50 mins on my MACbook pro laptop)
+# Building from sources
+## 50 mins on my MACbook pro laptop
 
 I have not published the image on docker-hub. So you will need to clone the Github repo and build it.
 Building this can take 2 hours or more depending on your setup.
