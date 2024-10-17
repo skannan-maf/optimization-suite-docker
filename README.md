@@ -8,7 +8,7 @@ Hub](https://hub.docker.com/r/tkralphs/coinor-optimization-suite/). To use,
 simply install Docker (see instructions below) and then do
 
 ```
-docker pull tkralphs/coinor-optimization-suite
+docker pull <To Be Done>
 ```
 
 This retrieves a docker image containing the COIN-OR Optimization Suite. Once
@@ -19,7 +19,7 @@ the files in to the container, then copy the results back out. To do this,
 first create and start a container, as follows:
 
 ```
-docker create --name=coin-or -it tkralphs/coinor-optimization-suite
+docker create --name=coin-or -it <To-Be-Done>
 docker start coin-or
 ```
 
@@ -52,7 +52,7 @@ much of a risk inside a docker container, since it can be recreated easily.
 Just clone the repository and build the docker image by
 
 ```
-git clone https://github.com/tkralphs/optimization-suite-docker
+git clone https://github.com/skannan-maf/optimization-suite-docker
 cd optimization-suite-docker
 sudo docker build -t coin-or image/
 ```
@@ -63,11 +63,11 @@ commands will have to be executed with `sudo`.
 ## Windows
 
 First install Docker Desktop for Windows (in older versions of Windows without
-built-in virtualization, the instructions my be different). From a Powershell
+built-in virtualization, the instructions may be different). From a Powershell
 terminal, clone the repository and build the docker image by the commands
 
 ```
-git clone https://github.com/PatWie/optimization-suite-docker
+git clone https://github.com/skannan-maf/optimization-suite-docker
 cd optimization-suite-docker
 docker build -t coin-or image/
 ```
@@ -76,56 +76,12 @@ Finally, follow the instructions for running a solver from above.
 
 ## Mac OSX
 
-Since Docker is a bit more difficult to get running on OSX than on Linux, this
-is some additional documentation for the OSX crowd. OSX is not like
-Linux---virtualization is not built into the kernel. Therefore, we need to run
-the docker machine inside another VM. For this, we need virtualbox. The
-instructions below are for installing virutalbox with `homebrew`, which seems
-to work very well. (Caveat: I first found some old instructions on how to do
-this and took a round-about path to the installation. Therefore, the list of
-commands below is not exactly what I did. However, I think it's the right
-incantation if you're starting from scratch with an updated install of
-homebrew.)
-
-Update: There now seems to be a trouble-free installation of Docker on OS X as
-a native app. I haven't tried this, but I guess it should work well and might
-be preferable is you are not already using `homebrew`.
-
-First, install virtualbox
+Install "Docker desktop"
 
 ```
-brew update
-brew tap caskroom/cask
-brew cask install virtualbox
-```
-
-Now install `docker` and `docker-machine`
-
-```
-brew install docker
-brew install docker-machine
-```
-
-Create a new docker server to run in virtualbox and set environment variables
-so docker knows how to connect to it.
-
-```
-docker-machine create --driver virtualbox default
-eval "$(docker-machine env default)"
-```
-
-Now follow instructions as above for building the container
-
-```
-git clone https://github.com/tkralphs/optimization-suite-docker
+git clone https://github.com/skannan-maf/optimization-suite-docker
 cd optimization-suite-docker/
 docker build -t optimization-suite image/
-```
-
-Finally, start up the server and the container
-
-```
-docker-machine start default
 ```
 
 Now follow the instructions for running a solver from above.
