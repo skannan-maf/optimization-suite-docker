@@ -8,7 +8,7 @@ Cheers!
 
 # What do you get?
 
-**Python 3.10 base** + The following solvers from CoIn-OR optimization suite :
+**Python 3.10 base** + The following solvers from **COIN-OR optimization suite** :
 1. Osi
 2. Clp
 3. Cbc
@@ -30,7 +30,7 @@ Cheers!
 
 # And, full credits to ...
 
-Full credits to the CoIn-OR initiative, the developers and the folks who put all this together.
+Full credits to the COIN-OR initiative, the developers and the folks who put all this together.
 My contribution is just to assemble the dockerfile on a **Python image** with a more recent version of compilers.
 
 # Changes from the parent repo
