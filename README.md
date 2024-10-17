@@ -1,6 +1,15 @@
 This is a Docker image containing an installed version of the [COIN-OR
 Optimization Suite](https://github.com/coin-or/COIN-OR-OptimizationSuite).
 
+This image is based on Python:3.10 image and has latest versions of gcc, gfortran (version 12.2.0)
+NOTE that these versions are post the "cxx14" era and so by default some old features are not supported.
+Use the CXXFlAGS to enable cxx14 to compile old programs (like I did in the Docker image)
+
+This image can serve as a great base image for python programmers interested in developing optimization programs.
+For e.g. Python programs that use Pyomo library (or) any other optimization library that can benefit from the solvers built into this image.
+
+Cheers!
+
 # Install and Use From Docker Hub
 
 This image is now on [Docker
