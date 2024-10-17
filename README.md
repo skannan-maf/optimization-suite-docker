@@ -11,7 +11,7 @@ For e.g. Python programs that use Pyomo library (or) any other optimization libr
 
 Cheers!
 
-# Building from sources (2 hrs mininum)
+# Building from sources (50 mins on my MACbook pro laptop)
 
 I have not published the image on docker-hub. So you will need to clone the Github repo and build it.
 Building this can take 2 hours or more depending on your setup.
