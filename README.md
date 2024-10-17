@@ -18,10 +18,15 @@ Building this can take 2 hours or more depending on your setup.
 
 Install "Docker desktop" on your machine
 
+Build the image
 ```
 git clone https://github.com/skannan-maf/optimization-suite-docker
 cd optimization-suite-docker
 sudo docker build -t coin-or:latest image/
+```
+
+Create & start a container
+```
 docker create --name=coin-or -it coin-or:latest
 docker start coin-or
 ```
