@@ -25,7 +25,7 @@ Optimization Suite](https://github.com/coin-or/COIN-OR-OptimizationSuite).
 
 # And, full credits to ...
 Full credits to the CoIn-OR initiative, the developers and the folks who put all this together.
-My contribution is just to assemble the dockerfile on a **Python image** with the latest compilers.
+My contribution is just to assemble the dockerfile on a **Python image** with the latest compilers (as on 17 Oct 2024).
 
 # Changes from the parent repo
 
