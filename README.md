@@ -1,16 +1,18 @@
 This is a Dockerfile that will help you create a Docker image containing an installed version of the [COIN-OR
 Optimization Suite](https://github.com/coin-or/COIN-OR-OptimizationSuite).
 
-This Dockerfile is based on Python:3.10 image and has latest versions of gcc, gfortran (version 12.2.0)
-NOTE that these versions are post the "cxx14" era and so by default some old features will not be supported.
-Use the CXXFLAGS to enable cxx14 support to compile old programs (like I did in the Dockerfile)
-Similarly for Fortran flags (See the Dockerfile)
+# Changes from the parent repo
 
-I have also modified the repository access to use https instead of http (in the Dockerfile).
-This removes http related errors from certain proxies that result in Checksum/Hash errors.
+1. This Dockerfile is based on Python:3.10 image and has latest versions of gcc, gfortran (version 12.2.0)
+   NOTE that these versions are post the "cxx14" era and so by default some old features will not be supported.
+   Use the CXXFLAGS to enable cxx14 support to compile old programs (like I did in the Dockerfile)
+   Similarly for Fortran flags (See the Dockerfile)
 
-In the resultant docker image, the OR executables are installed in **/usr/bin** 
-and the OR libraries are installed in **/usr/lib**
+2. I have also modified the repository access to use **https** instead of **http** (in the Dockerfile).
+   This removes http related errors from certain proxies that result in Checksum/Hash errors.
+
+3. In the resultant docker image, the OR executables are installed in **/usr/bin** 
+   and the OR libraries are installed in **/usr/lib**
 
 This image can serve as a great base image for python programmers interested in developing optimization programs.
 For e.g. Python programs that use Pyomo library (or) any other optimization library that can benefit from the solvers built into this image.
