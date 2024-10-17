@@ -1,6 +1,32 @@
 This is a Dockerfile that will help you create a Docker image containing an installed version of the [COIN-OR
 Optimization Suite](https://github.com/coin-or/COIN-OR-OptimizationSuite).
 
+# What do you get?
+
+Python base + The following solvers from CoIn-OR optimization suite :
+1. Osi
+2. Clp
+3. Cbc
+4. DyLP
+5. FlopC++
+6. Vol
+7. SYMPHONY
+8. Glpk
+9. Smi
+10. CoinMP
+11. Bcp
+12. Ipopt
+13. Alps
+14. Dip
+15. Bonmin
+16. Couenne
+17. MibS
+18. Disco
+
+# And, full credits to ...
+Full credits to the CoIn-OR initiative, the developers and the folks who put all this together.
+My contribution is just to assemble the dockerfile on a **Python image** with the latest compilers.
+
 # Changes from the parent repo
 
 1. This Dockerfile is based on Python:3.10 image and has latest versions of gcc, gfortran (version 12.2.0)
