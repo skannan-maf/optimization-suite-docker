@@ -16,7 +16,7 @@ Cheers!
 I have not published the image on docker-hub. So you will need to clone the Github repo and build it.
 Building this can take 2 hours or more depending on your setup.
 
-Install "Docker desktop" in your machine
+Install "Docker desktop" on your machine
 
 ```
 git clone https://github.com/skannan-maf/optimization-suite-docker
