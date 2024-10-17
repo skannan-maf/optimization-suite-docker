@@ -39,11 +39,13 @@ My contribution is just to assemble the dockerfile on a **Python image** with a 
    NOTE that these versions are post the "cxx14" era and so by default some old features will not be supported.
    Use the CXXFLAGS to enable cxx14 support to compile old programs (like I did in the Dockerfile)
    Similarly for Fortran flags (See the Dockerfile)
+   
+2. libgfortran-12-dev package is the one that comes with the python base image. So, modified the Dockerfile to suit this.
 
-2. I have also modified the repository access to use **https** instead of **http** (in the Dockerfile).
+3. I have also modified the repository access to use **https** instead of **http** (in the Dockerfile).
    This removes http related errors from certain proxies that result in Checksum/Hash errors.
 
-3. In the resultant docker image, the OR executables are installed in **/usr/bin** 
+4. In the resultant docker image, the OR executables are installed in **/usr/bin** 
    and the OR libraries are installed in **/usr/lib**
 
 # Building from sources
