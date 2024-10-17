@@ -22,12 +22,15 @@ Cheers!
 # Building from sources
 ## 50 mins on my MACbook pro laptop
 
-I have not published the image on docker-hub. So you will need to clone the Github repo and build it.
-Building this can take 2 hours or more depending on your setup.
+I have not published the image on docker-hub. So you will need to clone the Github repo and build it locally.
+Building this can take nearly 1 hour depending on your setup. Build it over lunch!
 
-Install "Docker desktop" on your machine
+Install "Docker desktop" on your machine if you haven't already.
 
-Build the image
+The instructions below work for MAC and I hope they would work for Linux as well.
+Windows may need little changes (for e.g. sudo is a native linux command; you need to ensure the command is run with Admin privileges in Windows)
+
+Build the image (Need super-user/admin privilege)
 ```
 git clone https://github.com/skannan-maf/optimization-suite-docker
 cd optimization-suite-docker
