@@ -3,7 +3,7 @@ Optimization Suite](https://github.com/coin-or/COIN-OR-OptimizationSuite).
 
 # What do you get?
 
-Python base + The following solvers from CoIn-OR optimization suite :
+**Python 3.10 base** + The following solvers from CoIn-OR optimization suite :
 1. Osi
 2. Clp
 3. Cbc
