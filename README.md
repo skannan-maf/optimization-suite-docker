@@ -2,7 +2,7 @@ This is a Dockerfile that will help you create a Docker image containing an inst
 Optimization Suite](https://github.com/coin-or/COIN-OR-OptimizationSuite).
 
 This image can serve as a great base image for python programmers interested in developing optimization programs.
-For e.g. Python programs that use Pyomo library (or) any other optimization library that can benefit from the solvers built into this image.
+For e.g. Python programs that use **Pyomo library (or) any other optimization library** that can benefit from the solvers built into this image.
 
 Cheers!
 
@@ -29,12 +29,13 @@ Cheers!
 18. Disco
 
 # And, full credits to ...
+
 Full credits to the CoIn-OR initiative, the developers and the folks who put all this together.
-My contribution is just to assemble the dockerfile on a **Python image** with the latest compilers (as on 17 Oct 2024).
+My contribution is just to assemble the dockerfile on a **Python image** with a more recent version of compilers.
 
 # Changes from the parent repo
 
-1. This Dockerfile is based on Python:3.10 image and has latest versions of gcc, gfortran (version 12.2.0)
+1. This Dockerfile is based on Python:3.10 image and has recent versions of gcc, gfortran (version 12.2.0)
    NOTE that these versions are post the "cxx14" era and so by default some old features will not be supported.
    Use the CXXFLAGS to enable cxx14 support to compile old programs (like I did in the Dockerfile)
    Similarly for Fortran flags (See the Dockerfile)
@@ -46,7 +47,7 @@ My contribution is just to assemble the dockerfile on a **Python image** with th
    and the OR libraries are installed in **/usr/lib**
 
 # Building from sources
-## 50 mins on my MACbook pro laptop
+## Takes 50 mins to build on my MACbook pro laptop
 
 I have not published the image on docker-hub. So you will need to clone the Github repo and build it locally.
 Building this can take nearly 1 hour depending on your setup. Build it over lunch!
