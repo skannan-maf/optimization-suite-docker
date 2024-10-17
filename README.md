@@ -11,9 +11,9 @@ For e.g. Python programs that use Pyomo library (or) any other optimization libr
 
 Cheers!
 
-# Not published in Docker-hub
+# Building from sources (2 hrs mininum)
 
-I have not published the image in docker-hub. So you will need to clone the Github repo and build it.
+I have not published the image on docker-hub. So you will need to clone the Github repo and build it.
 Building this can take 2 hours or more depending on your setup.
 
 Install "Docker desktop" in your machine
