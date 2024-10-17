@@ -1,16 +1,19 @@
 FROM python:3.10
 MAINTAINER Sarnath Kannan (skannan.maf@gmail.com)
 
+RUN sed -i 's|http://|https://|g' /etc/apt/sources.list.d/debian.sources
+RUN apt-get update && apt-get install -y --no-install-recommends apt-transport-https ca-certificates
+
 RUN apt-get update
-RUN apt-get update && apt-get install -y software-properties-common build-essential patch pkg-config file
+RUN apt-get update && apt-get install -y --no-install-recommends software-properties-common build-essential patch pkg-config file
 RUN apt-get -y install --no-install-recommends git subversion gcc g++ make cmake wget gfortran
 RUN apt-get -y install --no-install-recommends libstdc++6 libgfortran5 libblas-dev liblapack-dev libmetis-dev libnauty2-dev
 # RUN apt-get update && apt-cache search libgfortran (Helped debug the version of libgfortran-dev to use)
 # Run the command above if you encounter issues with version of libgfortran-?-dev below
-RUN apt-get update && apt-get install -y libgfortran-12-dev
+RUN apt-get update && apt-get install -y --no-install-recommends libgfortran-12-dev
 RUN apt-get -y install --no-install-recommends ca-certificates
 
-RUN apt-get install -y glpk-utils libglpk-dev libglpk40
+RUN apt-get install -y --no-install-recommends glpk-utils libglpk-dev libglpk40
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
